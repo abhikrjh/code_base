@@ -1,5 +1,9 @@
 package JavaSynchronization;
 
+/*The consumers halt consuming if the size of queue is 0 (empty) and resumes consuming once the queue has an element. 
+Blocking Queue solves much of the problem of synchronization mechanism handled by wait() and notify() in producer-consumer problem. 
+The blockingQueue has methods take() and put which uses java. util.*/
+
 import java.util.Random;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;

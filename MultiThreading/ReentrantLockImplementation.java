@@ -9,7 +9,8 @@ import java.util.concurrent.locks.ReentrantLock;
  *  synchronized block are reentrant in nature i.e 
  *  if a thread has lock on the monitor object and if another synchronized block requires to have the lock on the same 
  *  monitor object then thread can enter that code block. 
- *  I think this is the reason for the class name to be ReentrantLock.
+ *  I think this is the reason for the class name to be ReentrantLock. 
+ *  and thats why we can call one synchronized method from other synchronized method
 */
 class Runner {
 	

@@ -4,6 +4,11 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+/* IMPORTANT 
+ExecutorService abstracts away many of the complexities associated with the lower-level abstractions like raw Thread. 
+It provides mechanisms for safely starting, closing down, submitting, executing, and blocking on the successful or 
+abrupt termination of tasks (expressed as Runnable or Callable).
+*/
 public class ExecutorServiceImplementation {
 	
 	 public static void main(String[] args) {
