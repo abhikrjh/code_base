@@ -6,8 +6,36 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 public class LongestPalindrome {
-
+	
 	public static String longestPalindrome(String input) {
+		String longestPalindrome = "";
+		Map<String, Integer> map = new HashMap<String, Integer>();
+		String temp = "";int j=0;
+		label1:for (int i = j; i < input.length();) {
+			char c = input.charAt(i);
+			temp = temp + c;
+
+			if (isPalindrome(temp)) {
+				map.put(temp, temp.length());
+			}
+
+			if (null !=  map.get(temp) && (map.get(temp) > longestPalindrome.length())) {
+				longestPalindrome = temp;
+			}
+			
+			if (i == input.length() - 1) {
+				temp = "";
+				j = j+1;
+				i = j;
+				continue label1;
+			}
+			
+			i++;
+		}
+		return longestPalindrome;
+	}
+
+	public static String longestPalindrome1(String input) {
 		String longestPalindrome = "";
 		Map<String, Integer> map = new LinkedHashMap<String, Integer>();
 		String str = "";
